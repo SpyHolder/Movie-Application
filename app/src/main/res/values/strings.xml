@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">MovieApplication</string>
+    <string name="open">Open Navigation</string>
+    <string name="close">Close Navigation</string>
+    <string name="Copyright">Copyright \u00A9 SpyHolder</string>
+</resources>

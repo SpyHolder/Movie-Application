@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@color/utama"
+    android:padding="15dp">
+    <ImageView
+        android:id="@+id/ivProfile"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/ic_baseline_account_circle_24"/>
+    <TextView
+        android:id="@+id/tvNameProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/ivProfile"
+        android:text="Name User"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ivProfile"
+        android:layout_below="@id/tvNameProfile"
+        android:text="Email@Email.com"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+
+</RelativeLayout>
