@@ -1,6 +1,8 @@
 <resources>
-    <string name="app_name">MovieApplication</string>
+    <string name="app_name">Movie App</string>
     <string name="open">Open Navigation</string>
     <string name="close">Close Navigation</string>
-    <string name="Copyright">Copyright \u00A9 SpyHolder</string>
+    <string name="Copyright">Copyright \u00A9 By SpyHolder</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

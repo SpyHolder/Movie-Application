@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="10dp"
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp">
+
+    <ImageView
+        android:id="@+id/ivUser"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_baseline_account_circle_24" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toRightOf="@+id/ivUser"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="5dp">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+                <TextView
+                    android:id="@+id/tvUserComment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="Ikhsan"
+                    android:textColor="@color/black"
+                    android:textSize="17sp" />
+                <TextView
+                    android:id="@+id/tvComment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:padding="5dp"
+                    android:text="jsjfgjdbfhgjhsgddvzxhjghkshrkjshfkjhsdkjfghjdgshjfgdhgftfjhgfjgsdfgsyufgjxgjhfgsjdfhsdjfgshdggkjhasdgxjzchzghjgasdhgshfgjsdgf" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tvLikeComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:drawableStart="@drawable/baseline_arrow_drop_up_24"
+                android:text="1.908"/>
+            <TextView
+                android:id="@+id/tvDislikeComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:drawableStart="@drawable/baseline_arrow_drop_down_24"
+                android:text="1.908"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

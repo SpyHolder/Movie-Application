@@ -13,7 +13,6 @@ import android.widget.Toast;
 import com.example.movieapplication.R;
 import com.example.movieapplication.api.ApiClient;
 import com.example.movieapplication.api.ApiInterface;
-import com.example.movieapplication.model.login.Login;
 import com.example.movieapplication.model.register.Register;
 
 import retrofit2.Call;
@@ -39,23 +38,27 @@ public class RegisterActivity extends AppCompatActivity {
             getSupportActionBar().hide();
         }
 
-        btnRegister.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String NAME = etName.getText().toString();
-                String EMAIL = etEmail.getText().toString();
-                String PASSWORD = etPassword.getText().toString();
-                String LEVEL = "user";
+        btnRegister.setOnClickListener(v->{
+            String NAME = etName.getText().toString();
+            String EMAIL = etEmail.getText().toString();
+            String PASSWORD = etPassword.getText().toString();
+            String LEVEL = "user";
+
+            if (NAME.equals("")&&EMAIL.equals("")&&PASSWORD.equals("")){
+                Toast.makeText(RegisterActivity.this, "Harap melengkapi seluruh data", Toast.LENGTH_SHORT).show();
+            } else if(NAME.equals("")){
+                Toast.makeText(RegisterActivity.this, "Harap mengisi Username", Toast.LENGTH_SHORT).show();
+            } else if (EMAIL.equals("")){
+                Toast.makeText(RegisterActivity.this, "Harap mengisi Email", Toast.LENGTH_SHORT).show();
+            } else if (PASSWORD.equals("")){
+                Toast.makeText(RegisterActivity.this, "Harap mengisi Password", Toast.LENGTH_SHORT).show();
+            } else {
                 Register(NAME,EMAIL,PASSWORD,LEVEL);
             }
         });
 
-        tvLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent kembaliLogin = new Intent(RegisterActivity.this, LoginActivity.class);
-                startActivity(kembaliLogin);
-            }
+        tvLogin.setOnClickListener(v->{
+            finish();
         });
 
     }
@@ -72,8 +75,7 @@ public class RegisterActivity extends AppCompatActivity {
                     String pesan = response.body().getPesan();
                     if(status==true){
                         Toast.makeText(RegisterActivity.this, pesan, Toast.LENGTH_SHORT).show();
-                        Intent kembaliLogin = new Intent(RegisterActivity.this, LoginActivity.class);
-                        startActivity(kembaliLogin);
+                        finish();
                     } else {
                         Toast.makeText(RegisterActivity.this, pesan, Toast.LENGTH_SHORT).show();
                     }

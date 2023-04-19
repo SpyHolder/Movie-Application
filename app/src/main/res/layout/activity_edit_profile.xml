@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.EditProfileActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/blur"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/utama_kedua"
+        android:foreground="@drawable/blue">
+<!--        <ImageView-->
+<!--            android:id="@+id/ivBlur"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:scaleType="fitXY"-->
+<!--            android:visibility="invisible"/>-->
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/EditProfileTollbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit Profile"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/CardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:backgroundTint="@color/white"
+            android:layout_margin="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/EditProfileTollbar"
+            app:layout_constraintBottom_toTopOf="@id/vPemisah">
+
+            <FrameLayout
+                android:id="@+id/flBTNEditProfile"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:id="@+id/ivEditProfile"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/oval_shape"
+                    android:src="@drawable/ic_baseline_account_circle_24"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:backgroundTint="@color/utama_kedua"/>
+                <ImageView
+                    android:id="@+id/ivImageChoose"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/baseline_photo_camera_24"
+                    android:layout_gravity="bottom|end"
+                    android:background="@drawable/stroke_corner"
+                    android:padding="3dp"/>
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/CardView"
+            android:background="@drawable/edit_profile_body"
+            android:backgroundTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="20dp"
+            android:padding="10dp">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toTopOf="parent">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etUsernameEditProfile"
+                    android:layout_width="match_parent"
+                    android:textSize="20sp"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:hint="Username"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tilUsername"
+                android:layout_marginTop="10dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmailEditProfile"
+                    android:layout_width="match_parent"
+                    android:textSize="20sp"
+                    android:inputType="textEmailAddress"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button
+                android:id="@+id/btnSaveProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Simpan"
+                android:drawableStart="@drawable/baseline_save_24"
+                android:padding="15dp"
+                app:layout_constraintTop_toBottomOf="@id/textInputEmail"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:drawablePadding="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="@drawable/stroke_corner"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/vPemisah"
+            android:layout_width="match_parent"
+            android:visibility="visible"
+            android:layout_height="1dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/CardView"
+            app:layout_constraintBottom_toTopOf="@id/CardView"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include layout="@layout/image_choose"/>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

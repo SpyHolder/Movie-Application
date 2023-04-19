@@ -1,17 +1,18 @@
-package com.example.movieapplication.model.list_movie;
+package com.example.movieapplication.model.comment;
 
+import java.util.ArrayList;
 import java.util.List;
 import com.google.gson.annotations.SerializedName;
 
-public class List_Movie {
+public class Comment{
 
 	@SerializedName("data")
-	private List<List_MovieData> data;
+	private ArrayList<CommentData> data;
 
 	@SerializedName("status")
 	private boolean status;
 
-	public List<List_MovieData> getData(){
+	public ArrayList<CommentData> getData(){
 		return data;
 	}
 

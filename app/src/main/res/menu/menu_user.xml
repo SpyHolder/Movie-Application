@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <group
         android:checkableBehavior="single">
         <item
@@ -13,36 +14,16 @@
         <item
             android:id="@+id/nbGenre"
             android:icon="@drawable/ic_baseline_home_24"
-            android:title="Genre">
-            <menu>
-                <group
-                    android:checkableBehavior="all">
-                    <item
-                        android:id="@+id/nbGenreAction"
-                        android:icon="@drawable/ic_baseline_home_24"
-                        android:title="Action"/>
-                    <item
-                        android:id="@+id/nbGenreFantasy"
-                        android:icon="@drawable/ic_baseline_home_24"
-                        android:title="Fantasy"/>
-                    <item
-                        android:id="@+id/nbGenreDrama"
-                        android:icon="@drawable/ic_baseline_home_24"
-                        android:title="Drama"/>
-                    <item
-                        android:id="@+id/nbGenreFiksiIlmiah"
-                        android:icon="@drawable/ic_baseline_home_24"
-                        android:title="Fiksi Ilmiah"/>
-                </group>
-            </menu>
-        </item>
+            android:title="Genre"/>
         <item
-            android:id="@+id/nbSetting"
-            android:icon="@drawable/ic_baseline_search_24"
-            android:title="Setting"/>
+            android:id="@+id/nbAbout"
+            android:icon="@drawable/wallhaven_6o1zp7_1920x1080"
+            android:title="About Me"
+            android:menuCategory="system"/>
         <item
             android:id="@+id/nbLogout"
-            android:icon="@drawable/ic_baseline_search_24"
-            android:title="Logout"/>
+            android:icon="@drawable/baseline_login_24"
+            android:title="Logout"
+            android:menuCategory="system"/>
     </group>
 </menu>
